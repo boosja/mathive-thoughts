@@ -14,6 +14,4 @@
                       :paths ["/styles.css"]}}
 
    :optimus/assets [{:public-dir "public"
-                     :paths [#".*\.svg"
-                             #".*\.png"
-                             #".*\.webp"]}]})
+                     :paths [#"images/*\.*"]}]})
