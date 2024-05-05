@@ -4,6 +4,8 @@
 
 (def config
   {:site/title pages/title
+   :site/default-locale :no
+
    :powerpack/render-page #'pages/render-page
    :powerpack/create-ingest-tx #'ingest/create-tx
 
