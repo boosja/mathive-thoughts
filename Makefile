@@ -4,7 +4,7 @@ tailwind-build:
 tailwind:
 	npx tailwindcss -i ./src/main.css -o ./resources/public/styles.css --watch
 
-build: tailwind-build
+build:
 	clojure -X:build
 
 .PHONY: build tailwind tailwind-build

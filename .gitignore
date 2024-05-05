@@ -5,5 +5,4 @@
 .DS_Store
 .nrepl-port
 node_modules/
-resources/public/styles.css
 target/
