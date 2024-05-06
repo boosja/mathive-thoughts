@@ -3,11 +3,10 @@
            (java.time.format DateTimeFormatter)
            (java.util Locale)))
 
-(defn document [{:keys [title favicon]} & content]
+(defn document [{:keys [title]} & content]
   [:html.dark:bg-zinc-900
    [:head
     (when title [:title title])
-    [:link {:rel "icon" :href favicon}]
     [:link {:rel "preconnect" :href "https://fonts.googleapis.com"}]
     [:link {:rel "preconnect" :href "https://fonts.gstatic.com" :crossorigin true}]
     [:link {:rel "stylesheet"
@@ -40,11 +39,10 @@
   [:article.prose.prose-lg.dark:prose-invert.prose-zinc.container
    content])
 
-(defn layout [{:keys [title favicon]} & content]
+(defn layout [{:keys [title logo]} & content]
   (document
-   {:title title
-    :favicon favicon}
-   (header favicon)
+   {:title title}
+   (header logo)
    [:main.py-16.px-4
     (article content)]
    (footer)))

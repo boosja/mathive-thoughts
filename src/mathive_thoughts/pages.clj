@@ -13,16 +13,15 @@
    (sort-by :blog-post/published #(compare %2 %1))))
 
 (def title "Mathive Thoughts")
-(def favicon "/images/too-massive.webp")
+(def logo "/images/too-massive.webp")
 
 (defn render-frontpage [context _page]
   (comp/document
-   {:title title
-    :favicon favicon}
+   {:title title}
    [:main.pb-16.pt-4.px-4
     (comp/article
      [:img.rounded-2xl
-      {:src favicon
+      {:src logo
        :alt title}]
      [:ul.list-none.ps-0
       (for [post (get-blog-posts (:app/db context))]
@@ -30,7 +29,7 @@
    (comp/footer)))
 
 (defn render-article [_context page]
-  (comp/layout {:favicon favicon}
+  (comp/layout {:logo logo}
                (md/render-html (:page/body page))))
 
 (defn render-blog-post [context page]
