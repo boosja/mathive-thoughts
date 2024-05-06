@@ -14,4 +14,5 @@
                       :paths ["/styles.css"]}}
 
    :optimus/assets [{:public-dir "public"
-                     :paths [#"images/*\.*"]}]})
+                     :paths [#"/*\.(png|ico)"
+                             #"images/*\.*"]}]})
