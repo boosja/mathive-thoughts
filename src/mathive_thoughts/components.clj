@@ -47,6 +47,10 @@
     (article content)]
    (footer)))
 
+(defn teaser [body]
+  [:section.rounded-2xl.px-8.py-1.bg-gradient-to-bl.from-amber-200.to-amber-400.dark:from-amber-300.dark:to-amber-600.font-bold.text-black
+   body])
+
 (def no (Locale/forLanguageTag "no"))
 
 (defn ymd [^LocalDateTime ldt]

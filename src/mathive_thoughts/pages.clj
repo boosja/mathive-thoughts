@@ -15,7 +15,7 @@
 (def title "Mathive Thoughts")
 (def logo "/images/too-massive.webp")
 
-(defn render-frontpage [context _page]
+(defn render-frontpage [context page]
   (comp/document
    {:title title}
    [:main.pb-16.pt-4.px-4
@@ -23,6 +23,8 @@
      [:img.rounded-2xl
       {:src logo
        :alt title}]
+     (comp/teaser
+      (md/render-html (:page/body page)))
      [:ul.list-none.ps-0
       (for [post (get-blog-posts (:app/db context))]
         (comp/post-item post))])]
