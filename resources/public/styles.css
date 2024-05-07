@@ -1471,8 +1471,22 @@ video {
   background-color: rgb(212 212 216 / 0.4);
 }
 
+.bg-gradient-to-bl {
+  background-image: linear-gradient(to bottom left, var(--tw-gradient-stops));
+}
+
 .bg-texture-light {
   background-image: url("images/bg_light.svg");
+}
+
+.from-amber-200 {
+  --tw-gradient-from: #fde68a var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(253 230 138 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-amber-400 {
+  --tw-gradient-to: #fbbf24 var(--tw-gradient-to-position);
 }
 
 .bg-sm {
@@ -1482,6 +1496,16 @@ video {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-12 {
@@ -1515,12 +1539,21 @@ video {
   font-family: "Fontdiner Swanky", serif;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
 .font-normal {
   font-weight: 400;
 }
 
 .italic {
   font-style: italic;
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-current {
@@ -1583,5 +1616,15 @@ video {
 
   .dark\:bg-texture-dark {
     background-image: url("images/bg_dark.svg");
+  }
+
+  .dark\:from-amber-300 {
+    --tw-gradient-from: #fcd34d var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(252 211 77 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+
+  .dark\:to-amber-600 {
+    --tw-gradient-to: #d97706 var(--tw-gradient-to-position);
   }
 }
