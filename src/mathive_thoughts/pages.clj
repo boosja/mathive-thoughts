@@ -20,12 +20,10 @@
    {:title title}
    [:main.pb-16.pt-4.px-4
     (comp/article
-     [:img.rounded-2xl
-      {:src logo
-       :alt title}]
      (comp/teaser
+      {:title title :logo logo}
       (md/render-html (:page/body page)))
-     [:ul.list-none.ps-0
+     [:ul.list-none.!ps-0
       (for [post (get-blog-posts (:app/db context))]
         (comp/post-item post))])]
    (comp/footer)))

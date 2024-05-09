@@ -3,6 +3,8 @@
            (java.time.format DateTimeFormatter)
            (java.util Locale)))
 
+(def prose "prose dark:prose-invert prose-sm sm:prose-lg")
+
 (defn document [{:keys [title]} & content]
   [:html.dark:bg-zinc-900
    [:head
@@ -15,8 +17,8 @@
     content]])
 
 (defn header [logo]
-  [:header.prose.prose-lg.dark:prose-invert.w-full.max-w-none.px-4.py-12
-   {:class "bg-zinc-300/40 dark:bg-zinc-950/40"}
+  [:header.w-full.max-w-none.px-4.py-12
+   {:class (str prose " bg-zinc-300/40 dark:bg-zinc-950/40")}
    [:nav.container.max-w-prose.flex.gap-4.items-center
     [:a.no-underline.text-current.mx-auto
      {:href "/"}
@@ -27,7 +29,8 @@
       "Thoughts"]]]])
 
 (defn footer []
-  [:footer.prose.prose-lg.dark:prose-invert.container.flex.gap-4.py-8.px-4
+  [:footer.container.flex.gap-4.py-8.px-4
+   {:class prose}
    "Mathias Iversen"
    [:a.text-current.no-underline.font-normal.hover:underline
     {:href "https://github.com/TheBoosja"}
@@ -36,7 +39,8 @@
    [:span "2024"]])
 
 (defn article [& content]
-  [:article.prose.prose-lg.dark:prose-invert.prose-zinc.container
+  [:article.prose-zinc.container
+   {:class prose}
    content])
 
 (defn layout [{:keys [title logo]} & content]
@@ -47,9 +51,14 @@
     (article content)]
    (footer)))
 
-(defn teaser [body]
-  [:section.rounded-2xl.px-8.py-1.bg-gradient-to-bl.from-amber-200.to-amber-400.dark:from-amber-300.dark:to-amber-600.font-bold.text-black
-   body])
+(defn teaser [{:keys [title logo]} & body]
+  [:header.container
+   {:class prose}
+   [:img.rounded-t-2xl.not-prose
+    {:src logo
+     :alt title}]
+   [:section.rounded-b-2xl.px-6.sm:px-8.py-1.bg-gradient-to-b.from-amber-200.to-amber-400.dark:from-amber-300.dark:to-amber-600.font-bold.text-black
+    body]])
 
 (def no (Locale/forLanguageTag "no"))
 
