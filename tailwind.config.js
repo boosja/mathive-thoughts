@@ -21,8 +21,10 @@ module.exports = {
             },
             code: {
               padding: '4px 8px',
-              border: '1px solid grey',
+              // border: '1px solid grey',
               borderRadius: '4px',
+              backgroundColor: theme('colors.black'),
+              color: theme('colors.zinc.400'),
             },
             'code::before': { content: '""' },
             'code::after': { content: '""' },

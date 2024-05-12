@@ -6,7 +6,7 @@
 (def prose "prose dark:prose-invert prose-sm sm:prose-lg")
 
 (defn document [{:keys [title]} & content]
-  [:html.dark:bg-zinc-900
+  [:html.bg-amber-50.dark:bg-zinc-900
    [:head
     (when title [:title title])
     [:link {:rel "preconnect" :href "https://fonts.googleapis.com"}]
@@ -18,11 +18,11 @@
 
 (defn header [logo]
   [:header.w-full.max-w-none.px-4.py-12
-   {:class (str prose " bg-zinc-300/40 dark:bg-zinc-950/40")}
+   {:class (str prose " bg-amber-200/30 dark:bg-zinc-950/40")}
    [:nav.container.max-w-prose.flex.gap-4.items-center
     [:a.no-underline.text-current.mx-auto
      {:href "/"}
-     [:h2.m-0.grid.grid-flow-col.gap-4.items-center.font-swanky
+     [:h2.!m-0.grid.grid-flow-col.gap-4.items-center.font-swanky
       "Mathive"
       [:figure.size-20.not-prose.rounded-2xl.overflow-hidden
        [:img {:src logo :alt "Logo"}]]
