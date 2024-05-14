@@ -76,7 +76,7 @@ const changeBeskrivelse = (kvittering, updatedObservasjon) => {
 
 Dette er jo helt hårreisende. Når man slenger det sammen med alle de andre actions og logiske knuterier i et projekt blir det ganske mange linjer kode. Og det vil øke kompleksiteten og den kognitive belasten.
 
-Jeg har lenge lurt på hvordan, hvis det er mulig eller i det hele tatt verdt det, om man kan forbedre og forenkle slik kode.
+Jeg har lenge lurt på, hvis det er mulig eller i det hele tatt verdt det, hvordan man kan forbedre og forenkle slik kode.
 
 ## The Solvation
 
@@ -130,7 +130,7 @@ const updateIn = (obj, path, updateFn, ...args) => {
 };
 ```
 
-For å gjøre samle handling som eksemplet over, kan vi bruke `updateIn`, hvor:
+For å gjøre samme handling som eksemplet over, kan vi bruke `updateIn`, hvor:
 
 - Første argument er her kvittering, men vil praktisk være hele state-objektet.
 - Andre argument er her stien til observasjonens beskrivelse (der `0` er indeksen i listene).
