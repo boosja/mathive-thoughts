@@ -1,4 +1,4 @@
-:page/uri /
+:page/uri "/"
 :open-graph/title "Mathive Thoughts"
 :open-graph/description "Der mine overveldende tanker ekspanderes og får brått utløp"
 :open-graph/image "/images/too-massive.webp"
