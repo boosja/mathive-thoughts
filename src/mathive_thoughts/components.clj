@@ -3,7 +3,7 @@
            (java.time.format DateTimeFormatter)
            (java.util Locale)))
 
-(def prose "prose dark:prose-invert prose-sm sm:prose-lg")
+(def prose "prose dark:prose-invert prose-sm sm:prose-base")
 
 (defn document [{:keys [title]} & content]
   [:html.bg-amber-50.dark:bg-zinc-900

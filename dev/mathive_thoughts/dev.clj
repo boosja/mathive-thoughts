@@ -3,7 +3,7 @@
             [powerpack.dev :as dev]))
 
 (defmethod dev/configure! :default []
-  blog/config)
+  (blog/create-app))
 
 (comment
 

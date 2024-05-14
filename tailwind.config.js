@@ -20,11 +20,9 @@ module.exports = {
               color: theme('colors.blue.500')
             },
             code: {
-              padding: '4px 8px',
-              // border: '1px solid grey',
+              padding: '2px 4px',
               borderRadius: '4px',
-              backgroundColor: theme('colors.black'),
-              color: theme('colors.zinc.400'),
+              backgroundColor: theme('colors.amber.100'),
             },
             'code::before': { content: '""' },
             'code::after': { content: '""' },
@@ -35,7 +33,11 @@ module.exports = {
         },
         invert: {
           css: {
-            color: theme('colors.slate.400')
+            color: theme('colors.slate.400'),
+            code: {
+              backgroundColor: theme('colors.black'),
+              color: theme('colors.zinc.200'),
+            }
           }
         }
       }),
