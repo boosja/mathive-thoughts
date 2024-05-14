@@ -1,4 +1,4 @@
-:page/title Generelle Actions
+:page/title En ny tilgang til Redux actions
 :blog-post/tags [:actions :fp]
 :blog-post/author {person/id :mathias}
 :blog-post/published #time/ldt "2024-05-15T09:00:00"
@@ -12,7 +12,7 @@ Med inspirasjon fra Clojure's kjernefunksjoner, hvordan kan vi forenkle Redux ac
 
 > "The unavoidable price of reliability is simplicity" – C.A.R. Hoare
 
-De siste seks årene som React utvikler har jeg skrevet mange Redux actions. Snesevis. For hver ny feature har det fulgt som oftest flere nye actions, såsom `addOrder`, `updateDescription`, `deleteEverlastingDespair` osv.
+De siste seks årene som React-utvikler har jeg skrevet mange Redux actions. Snesevis. For hver ny feature har det fulgt som oftest flere nye actions, såsom `addOrder`, `updateDescription`, `deleteEverlastingDespair` osv.
 
 Legg til denne tingen i denne listen, oppdater dette feltet på denne tingen i denne listen, slett denne tingen her.
 
