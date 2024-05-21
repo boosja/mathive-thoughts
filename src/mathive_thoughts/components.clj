@@ -33,7 +33,7 @@
    {:class prose}
    "Mathias Iversen"
    [:a.text-current.no-underline.font-normal.hover:underline
-    {:href "https://github.com/TheBoosja"}
+    {:href "https://github.com/boosja"}
     "Github"]
    [:span.grow]
    [:span "2024"]])
