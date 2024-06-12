@@ -1,6 +1,6 @@
 :page/title Spekulasjon åpån Spec-ulation
-:open-graph/title Mathive Thoughts
-:open-graph/description Der mine overveldende tanker ekspanderes og får brått utløp
+:open-graph/title Spekulasjon åpån Spec-ulation | Mathive Thoughts
+:open-graph/description Noen tanker rundt Rich Hickeys "Spec-ulation"
 :open-graph/image /images/too-massive.webp
 :blog-post/tags [:versjonering]
 :blog-post/author {person/id :mathias}
