@@ -1,4 +1,7 @@
 :page/title En ny tilgang til Redux actions
+:open-graph/title Mathive Thoughts
+:open-graph/description Der mine overveldende tanker ekspanderes og får brått utløp
+:open-graph/image /images/too-massive.webp
 :blog-post/tags [:actions :fp]
 :blog-post/author {person/id :mathias}
 :blog-post/published #time/ldt "2024-05-15T09:00:00"
