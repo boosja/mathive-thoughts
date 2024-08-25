@@ -51,14 +51,32 @@
     (article content)]
    (footer)))
 
+(def divider
+  [:div.my-4.sm:my-6.h-1.bg-gradient-to-r.from-amber-300.to-amber-400.dark:from-amber-300.dark:to-amber-600])
+
+(def divider-2
+  [:div.my-4.sm:my-6.h-1.bg-gradient-to-l.from-amber-300.to-amber-400.dark:from-amber-300.dark:to-amber-600])
+
 (defn teaser [{:keys [title logo]} & body]
   [:header.container
    {:class prose}
-   [:img.rounded-t-2xl.not-prose
-    {:src logo
+   [:img.rounded-2xl.not-prose.mx-auto.border-2.border-amber-300.p-2
+    {:class "w-3/4"
+     :src logo
      :alt title}]
-   [:section.rounded-b-2xl.px-6.sm:px-8.py-1.bg-gradient-to-b.from-amber-200.to-amber-400.dark:from-amber-300.dark:to-amber-600.font-bold.text-black
-    body]])
+   divider
+   [:section.px-2.sm:px-6.my-2.sm:my-6.font-bold
+    [:h4 body]]
+   divider-2])
+
+#_(defn teaser [{:keys [title logo]} & body]
+    [:header.container
+     {:class prose}
+     [:img.rounded-t-2xl.not-prose
+      {:src logo
+       :alt title}]
+     [:section.rounded-b-2xl.px-6.sm:px-8.py-1.bg-gradient-to-b.from-amber-200.to-amber-400.dark:from-amber-300.dark:to-amber-600.font-bold.text-black
+      body]])
 
 (def no (Locale/forLanguageTag "no"))
 
