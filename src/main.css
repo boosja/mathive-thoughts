@@ -1,3 +1,5 @@
+@import url('syntax-highlight.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

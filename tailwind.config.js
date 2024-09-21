@@ -24,10 +24,14 @@ module.exports = {
               borderRadius: '4px',
               backgroundColor: theme('colors.amber.100'),
             },
-            'code::before': { content: '""' },
-            'code::after': { content: '""' },
+            'code::before': false,
+            'code::after': false,
             blockquote: {
               quotes: "none",
+            },
+            'pre.codehilite': {
+              backgroundColor: false,
+              color: false,
             },
           }
         },
