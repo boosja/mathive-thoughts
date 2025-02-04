@@ -1,7 +1,7 @@
 :page/title En ny tilgang til Redux actions
 :open-graph/title En ny tilgang til Redux actions | Mathive Thoughts
 :open-graph/description Med inspirasjon fra Clojure's kjernefunksjoner, hvordan kan vi forenkle Redux actions for å øke lesbarhet, gjenbrukelighet og vedlikehold, samt senke kognitiv belast?
-:open-graph/image /images/too-massive.webp
+:open-graph/image /images/og-too-massive.jpeg
 :blog-post/tags [:actions :fp]
 :blog-post/author {person/id :mathias}
 :blog-post/published #time/ldt "2024-05-15T09:00:00"
