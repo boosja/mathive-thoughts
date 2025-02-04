@@ -5,8 +5,9 @@
 
 (def prose "prose dark:prose-invert prose-sm sm:prose-base")
 
-(defn document [{:keys [title]} & content]
+(defn document [{:keys [title class]} & content]
   [:html.bg-amber-50.dark:bg-zinc-900
+   {:class class}
    [:head
     (when title [:title title])
     [:link {:rel "preconnect" :href "https://fonts.googleapis.com"}]
@@ -24,8 +25,9 @@
      {:href "/"}
      [:h2.!m-0.grid.grid-flow-col.gap-4.items-center.font-swanky
       "Mathive"
-      [:figure.size-20.not-prose.rounded-2xl.overflow-hidden
-       [:img {:src logo :alt "Logo"}]]
+      [:img.logo-transition.size-20.not-prose.rounded-2xl.overflow-hidden
+       {:src logo
+        :alt "Logo"}]
       "Thoughts"]]]])
 
 (defn footer []
@@ -43,9 +45,10 @@
    {:class prose}
    content])
 
-(defn layout [{:keys [title logo]} & content]
+(defn layout [{:keys [title logo class]} & content]
   (document
-   {:title title}
+   {:title title
+    :class class}
    (header logo)
    [:main.py-16.px-4
     (article content)]
@@ -60,7 +63,7 @@
 (defn teaser [{:keys [title logo]} & body]
   [:header.container
    {:class prose}
-   [:img.rounded-2xl.not-prose.mx-auto.border-2.border-amber-300.p-2
+   [:img.logo-transition.rounded-2xl.not-prose.mx-auto.border-2.border-amber-300.p-2
     {:class "w-3/4"
      :src logo
      :alt title}]

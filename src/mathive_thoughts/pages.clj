@@ -35,10 +35,21 @@
 (defn render-blog-post [context page]
   (render-article context page))
 
+(defn render-view-transition-page [_context page]
+  (comp/layout {:logo logo
+                :class "view-transition-page"}
+               (list [:figure.grid.grid-rows-1.items-center.justify-items-center.h-32.overflow-hidden.m-auto.rounded-md
+                      {:class "w-10/12"}
+                      [:img.w-full.grayscale.blur-sm
+                       {:src logo
+                        :alt "Mathive Thoughts Logo"}]]
+                     (md/render-html (:page/body page)))))
+
 (defn render-page [context page]
   (case (:page/kind page)
     :page.kind/frontpage (render-frontpage context page)
     :page.kind/blog-post (render-blog-post context page)
+    :page.kind/view-transition (render-view-transition-page context page)
     :page.kind/article (render-article context page)))
 
 (comment

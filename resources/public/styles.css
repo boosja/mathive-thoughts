@@ -1838,6 +1838,10 @@ video {
   margin: 0px
 }
 
+.m-auto {
+  margin: auto
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto
@@ -1886,8 +1890,16 @@ video {
   height: 0.25rem
 }
 
+.h-32 {
+  height: 8rem
+}
+
 .min-h-screen {
   min-height: 100vh
+}
+
+.w-10\/12 {
+  width: 83.333333%
 }
 
 .w-3\/4 {
@@ -1918,8 +1930,16 @@ video {
   grid-auto-flow: column
 }
 
+.grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr))
+}
+
 .items-center {
   align-items: center
+}
+
+.justify-items-center {
+  justify-items: center
 }
 
 .gap-4 {
@@ -1932,6 +1952,10 @@ video {
 
 .rounded-2xl {
   border-radius: 1rem
+}
+
+.rounded-md {
+  border-radius: 0.375rem
 }
 
 .rounded-b-2xl {
@@ -2078,10 +2102,87 @@ video {
   text-decoration-line: none
 }
 
+.blur-sm {
+  --tw-blur: blur(4px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+}
+
+.grayscale {
+  --tw-grayscale: grayscale(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+}
+
 .video {
   display: grid;
   justify-items: center;
 }
+
+img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========================= */
+
+/* [[[[ VIEW TRANSITION ]]]] */
+
+/* ========================= */
+
+@view-transition {
+  navigation: auto;
+}
+
+.logo-transition {
+  view-transition-name: logo;
+}
+
+/* Example article */
+
+.view-transition-page {
+  view-transition-name: view-transition-page;
+}
+
+::view-transition-old(view-transition-page) {
+  animation: 0.4s ease-out both scale-out;
+}
+
+::view-transition-new(view-transition-page) {
+  animation: 0.4s ease-in both scale-in;
+}
+
+@keyframes scale-out {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ========================= */
+
+/* [[[[ VIEW TRANSITION ]]]] */
+
+/* ========================= */
 
 @media (min-width: 640px) {
   .sm\:prose-base {
