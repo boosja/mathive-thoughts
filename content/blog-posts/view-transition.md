@@ -99,7 +99,7 @@ neste side.
  }
 ```
 
-Du kan se [resultatet her](/view-transition-1). Jeg setter
+Du kan se [resultatet her](/view-transition-1/). Jeg setter
 `view-transition-name` på `:root` og definerer mine zoom animasjoner med
 `scale`-funksjonen. Disse legger jeg da til på `::view-transition-old` og
 `::view-transtion-new` spesifikt målrettet det definerte navnet `root` (kunne
