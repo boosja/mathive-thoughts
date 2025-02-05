@@ -2,7 +2,7 @@
 :open-graph/title Å animere transisjoner mellom statiske sider | Mathive Thoughts
 :open-graph/description Jeg introduserer hvordan man kan animere overganger mellom statiske html-sider
 med det nye @view-transition CSS attributet.
-:open-graph/image /images/transition.webp
+:open-graph/image /images/og-too-massive.jpeg
 :blog-post/tags [:styles :animation]
 :blog-post/author {person/id :mathias}
 :blog-post/published #time/ldt "2025-02-05T09:00:00"
