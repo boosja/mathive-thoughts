@@ -3,7 +3,7 @@
 :open-graph/description Med inspirasjon fra Clojure's kjernefunksjoner, hvordan kan vi forenkle Redux actions for å øke lesbarhet, gjenbrukelighet og vedlikehold, samt senke kognitiv belast?
 :open-graph/image /images/og-too-massive.jpeg
 :blog-post/tags [:actions :fp]
-:blog-post/author {person/id :mathias}
+:blog-post/author {:person/id :mathias}
 :blog-post/published #time/ldt "2024-05-15T09:00:00"
 :blog-post/desc
 

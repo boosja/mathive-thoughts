@@ -4,7 +4,7 @@
 har jeg lært litt om hvordan man temmer terminalen til å oppføre seg rett.
 :open-graph/image /images/ungandr.gif
 :blog-post/tags [:terminal :ungandr]
-:blog-post/author {person/id :mathias}
+:blog-post/author {:person/id :mathias}
 :blog-post/published #time/ldt "2025-02-22T09:00:00"
 :blog-post/desc
 

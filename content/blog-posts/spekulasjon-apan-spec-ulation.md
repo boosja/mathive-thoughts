@@ -3,7 +3,7 @@
 :open-graph/description Noen tanker rundt Rich Hickeys Spec-ulation
 :open-graph/image /images/og-too-massive.jpeg
 :blog-post/tags [:versjonering]
-:blog-post/author {person/id :mathias}
+:blog-post/author {:person/id :mathias}
 :blog-post/published #time/ldt "2024-06-12T09:00:00"
 :blog-post/desc
 
