@@ -1,0 +1,15 @@
+[{:page/uri "/"
+  :page/kind :page.kind/frontpage
+  :open-graph/title "Mathive Thoughts"
+  :open-graph/description "Der mine overveldende tanker ekspanderes og får brått utløp"
+  :open-graph/image "/images/og-too-massive.jpeg"}
+ {:page/uri "/view-transition-1/"
+  :page/kind :page.kind/view-transition-1
+  :open-graph/title "View Transition 1 | Mathive Thoughts"
+  :open-graph/description "Der mine overveldende tanker ekspanderes og får brått utløp"
+  :open-graph/image "/images/og-too-massive.jpeg"}
+ {:page/uri "/view-transition-2/"
+  :page/kind :page.kind/view-transition-2
+  :open-graph/title "View Transition 2 | Mathive Thoughts"
+  :open-graph/description "Der mine overveldende tanker ekspanderes og får brått utløp"
+  :open-graph/image "/images/og-too-massive.jpeg"}]

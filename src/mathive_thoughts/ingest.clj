@@ -1,25 +1,21 @@
 (ns mathive-thoughts.ingest)
 
-(defn get-page-kind [filename]
-  (cond
-    (re-find #"^blog/" filename)
-    :page.kind/blog-post
+(defn ingest-blog-posts [blog-post]
+  (-> blog-post
+      (assoc :page/kind :page.kind/blog-post)))
 
-    (re-find #"^index\.md" filename)
-    :page.kind/frontpage
+(defn ingest-rest [page]
+  (if-not (:page/kind page)
+    (assoc page :page/kind :page.kind/article)
+    page))
 
-    (re-find #"^view-transition-.\.md" filename)
-    :page.kind/view-transition
+(defn create-tx [filename datas]
+  (cond->> datas
+    (re-find #"^blog-posts/" filename)
+    (map ingest-blog-posts)
 
     (re-find #"\.md$" filename)
-    :page.kind/article))
-
-(defn create-tx [filename txes]
-  (let [kind (get-page-kind filename)]
-    (for [tx txes]
-      (cond-> tx
-        (and (:page/uri tx) kind)
-        (assoc :page/kind kind)))))
+    (map ingest-rest)))
 
 (comment
 
