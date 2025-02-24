@@ -13,9 +13,10 @@
 
   (set! *print-namespace-maps* false)
 
-  (def app (dev/get-app))
-  (require '[datomic.api :as d])
-  (def db (d/db (:datomic/conn app)))
+  (do
+    (def app (dev/get-app))
+    (require '[datomic.api :as d])
+    (def db (d/db (:datomic/conn app))))
 
   (->> (d/entity db [:page/kind])
        :blog-post/tags
