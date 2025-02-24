@@ -1,7 +1,4 @@
 :page/title Terminal kos
-:open-graph/title Terminal kos | Mathive Thoughts
-:open-graph/description Jeg holder på med å utvikle et spill — et spill i terminalen. I denne prosessen
-har jeg lært litt om hvordan man temmer terminalen til å oppføre seg rett.
 :open-graph/image /images/ungandr.gif
 :blog-post/tags [:terminal :ungandr]
 :blog-post/author {:person/id :mathias}

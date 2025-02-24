@@ -1,13 +1,10 @@
 :page/title Spekulasjon åpån Spec-ulation
-:open-graph/title Spekulasjon åpån Spec-ulation | Mathive Thoughts
-:open-graph/description Noen tanker rundt Rich Hickeys Spec-ulation
-:open-graph/image /images/og-too-massive.jpeg
 :blog-post/tags [:versjonering]
 :blog-post/author {:person/id :mathias}
 :blog-post/published #time/ldt "2024-06-12T09:00:00"
 :blog-post/desc
 
-Noen tanker rundt Rich Hickeys "Spec-ulation"
+Noen tanker rundt Rich Hickeys Spec-ulation
 
 :page/body
 
