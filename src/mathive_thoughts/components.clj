@@ -45,7 +45,7 @@
    {:class prose}
    content])
 
-(defn layout [{:keys [title logo class]} & content]
+(defn ^{:indent 1} layout [{:keys [title logo class]} & content]
   (document
    {:title title
     :class class}
