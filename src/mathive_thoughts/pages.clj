@@ -7,7 +7,10 @@
 
 (defn render-article [_context page]
   (comp/layout {:logo const/logo}
-               (md/render-html (:page/body page))))
+    (list
+     (when-let [title (:page/title page)]
+       [:h1 title])
+     (md/render-html (:page/body page)))))
 
 (defn render-blog-post [context page]
   (render-article context page))

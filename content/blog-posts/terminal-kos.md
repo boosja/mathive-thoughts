@@ -10,8 +10,6 @@ har jeg lært litt om hvordan man temmer terminalen til å oppføre seg rett.
 
 :page/body
 
-# Terminal kos
-
 [<img src="/images/ungandr.gif" alt="Ungandr">](https://github.com/boosja/ungandr)
 
 Jeg holder på med å utvikle et spill — et spill i terminalen. I denne prosessen

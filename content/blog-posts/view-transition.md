@@ -9,8 +9,6 @@ med det nye @view-transition CSS attributet.
 
 :page/body
 
-# Å animere transisjoner mellom statiske sider
-
 <img src="/images/transition.webp" alt="View transition teaser">
 
 I etterkant av JavaZone så jeg en lightning-talk om [nye features i

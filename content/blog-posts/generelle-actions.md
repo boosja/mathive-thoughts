@@ -10,8 +10,6 @@ belast?
 
 :page/body
 
-# En ny tilgang til Redux actions
-
 > "The unavoidable price of reliability is simplicity" – C.A.R. Hoare
 
 De siste seks årene som React-utvikler har jeg skrevet mange Redux actions. Snesevis. For hver ny feature har det fulgt som oftest flere nye actions, såsom `addOrder`, `updateDescription`, `deleteEverlastingDespair` osv.

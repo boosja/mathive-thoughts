@@ -8,8 +8,6 @@ Noen tanker rundt Rich Hickeys Spec-ulation
 
 :page/body
 
-# Spekulasjon åpån Spec-ulation
-
 Etter at en kollega foreslo Rich Hickeys foredrag "Spec-ulation" i en tråd, bestemte jeg meg for å se det på forrige læringstorsdag.
 
 <div class="video">
