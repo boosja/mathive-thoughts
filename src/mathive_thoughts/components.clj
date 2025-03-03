@@ -10,6 +10,10 @@
    {:class class}
    [:head
     (when title [:title title])
+    [:link {:href "/atom.xml"
+            :rel "alternate"
+            :title "Mathive Thoughts"
+            :type "application/atom+xml"}]
     [:link {:rel "preconnect" :href "https://fonts.googleapis.com"}]
     [:link {:rel "preconnect" :href "https://fonts.gstatic.com" :crossorigin true}]
     [:link {:rel "stylesheet"

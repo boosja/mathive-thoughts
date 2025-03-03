@@ -2,6 +2,7 @@
   (:require [mathive-thoughts.components :as comp]
             [mathive-thoughts.const :as const]
             [mathive-thoughts.frontpage :as frontpage]
+            [mathive-thoughts.rss :as rss]
             [mathive-thoughts.view-transition-page :as view-transition-page]
             [powerpack.markdown :as md]))
 
@@ -21,6 +22,7 @@
     :page.kind/blog-post (render-blog-post context page)
     :page.kind/view-transition-1 (view-transition-page/render-page-1 context page)
     :page.kind/view-transition-2 (view-transition-page/render-page-2 context page)
+    :page.kind/rss-feed (rss/blog-post-feed page)
     :page.kind/article (render-article context page)))
 
 (comment
