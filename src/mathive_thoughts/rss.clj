@@ -4,14 +4,17 @@
             [hiccup.core :refer [html]]
             [mathive-thoughts.blog-posts :as blog-posts]
             [powerpack.markdown :as md])
-  (:import [java.time ZoneId]))
+  (:import [java.time ZoneId]
+           [java.time.format DateTimeFormatter]))
 
 (defn url [post]
   (str "https://mathivethoughts.no" (:page/uri post)))
 
 (defn time-str [ldt]
-  (str (.toOffsetDateTime
-        (.atZone ldt (ZoneId/of "Europe/Oslo")))))
+  (-> ldt
+      (.atZone (ZoneId/of "Europe/Oslo"))
+      .toOffsetDateTime
+      (.format DateTimeFormatter/ISO_OFFSET_DATE_TIME)))
 
 (defn entry [post]
   [:entry
@@ -19,20 +22,20 @@
    [:updated (time-str (:blog-post/published post))]
    [:author [:name (-> post :blog-post/author :person/full-name)]]
    [:link {:href (url post)}]
-   [:id (str "urn:mathivethoughts.no:feed:post:"
+   [:id (str "tag:mathivethoughts.no,2024:post-"
              (.toLocalDate (:blog-post/published post)))]
    [:content {:type "html"}
     (html
-     [:div
-      [:div (md/render-html (:blog-post/desc post))]
-      [:p [:a {:href (url post)} "Les artikkelen"]]])]])
+        [:div
+         [:div (md/render-html (:blog-post/desc post))]
+         [:p [:a {:href (url post)} "Les artikkelen"]]])]])
 
 (defn atom-xml [blog-posts]
   (xml/emit-str
    (xml/sexp-as-element
     [:feed {:xmlns "http://www.w3.org/2005/Atom"
             :xmlns:media "http://search.yahoo.com/mrss/"}
-     [:id "urn:mathivethoughts.no:feed"]
+     [:id "tag:mathivethoughts.no,2024:feed"]
      [:updated (time-str (:blog-post/published (first blog-posts)))]
      [:title {:type "text"} "Mathive Thoughts"]
      [:link {:rel "self" :href "https://mathivethoughts.no/atom.xml"}]
