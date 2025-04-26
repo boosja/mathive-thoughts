@@ -1,9 +1,8 @@
 (ns mathive-thoughts.components
+  (:require [mathive-thoughts.const :as const])
   (:import (java.time LocalDateTime)
            (java.time.format DateTimeFormatter)
            (java.util Locale)))
-
-(def prose "prose dark:prose-invert prose-sm sm:prose-base")
 
 (defn document [{:keys [title class]} & content]
   [:html.bg-amber-50.dark:bg-zinc-900
@@ -23,7 +22,7 @@
 
 (defn header [logo]
   [:header.w-full.max-w-none.px-4.py-12
-   {:class (str prose " bg-amber-200/30 dark:bg-zinc-950/40")}
+   {:class (str const/prose " bg-amber-200/30 dark:bg-zinc-950/40")}
    [:nav.container.max-w-prose.flex.gap-4.items-center
     [:a.no-underline.text-current.mx-auto
      {:href "/"}
@@ -36,7 +35,7 @@
 
 (defn footer []
   [:footer.container.flex.gap-4.py-8.px-4
-   {:class prose}
+   {:class const/prose}
    "Mathias Iversen"
    [:a.text-current.no-underline.font-normal.hover:underline
     {:href "https://github.com/boosja"}
@@ -46,7 +45,7 @@
 
 (defn article [& content]
   [:article.prose-zinc.container
-   {:class prose}
+   {:class const/prose}
    content])
 
 (defn ^{:indent 1} layout [{:keys [title logo class]} & content]
@@ -66,7 +65,7 @@
 
 (defn teaser [{:keys [title logo]} & body]
   [:header.container
-   {:class prose}
+   {:class const/prose}
    [:img.logo-transition.rounded-2xl.not-prose.mx-auto.border-2.border-amber-300.p-2
     {:class "w-3/4"
      :src logo
