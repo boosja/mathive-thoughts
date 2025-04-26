@@ -23,7 +23,7 @@ kan brukes til å manipulere teksten og markørens plass i terminalen. Om
 du vil fargelegge noe tekst rødt kan du prefikse teksten med `\033[31m`. Prøv
 f.eks. å kjøre denne i din foretrukne terminal:
 
-```
+```zsh
 $ echo "\033[31mDenne teksten er rød"
 ```
 
@@ -35,8 +35,8 @@ $ echo "\033[31mDenne teksten er rød"
 `\033[0m` nulstiller fargen tilbake til originalen. Om du vil ha det ekstra
 gøy kan du prøve denne:
 
-```
-echo "Det \033[31msmalt\! \033[34mBukken\033[0m stupte \033[32mbums\033[0m i \033[35mbakken\033[0m."
+```zsh
+$ echo "Det \033[31msmalt\! \033[34mBukken\033[0m stupte \033[32mbums\033[0m i \033[35mbakken\033[0m."
 ```
 
 > Fantastisk 🎨
@@ -106,7 +106,7 @@ Med `stty -e` får du listet opp alle flagg, kommandoer og bindings.
 
 I spillet mitt kan jeg da kjøre:
 
-```
+```zsh
 $ stty stop '' discard '' intr '' susp '' lnext '' reprint '' werase '' dsusp '' eof '' status '' start '' kill ''
 $ stty stop '^S' discard '^O' intr '^C' susp '^Z' lnext '^V' reprint '^R' werase '^W' dsusp '^Y' eof '^D' status '^T' start '^Q' kill '^U'
 ```
