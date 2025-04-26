@@ -1,4 +1,5 @@
-(ns mathive-thoughts.ingest)
+(ns mathive-thoughts.ingest
+  (:require [mathive-thoughts.const :as const]))
 
 (defn ingest-blog-posts [blog-post]
   (-> blog-post
@@ -10,10 +11,8 @@
     page))
 
 (defn get-open-graph-title [page]
-  (if-let [title (or (:open-graph/title page)
-                     (:page/title page))]
-    (str title " | " "Mathive Thoughts")
-    "Mathive Thoughts"))
+  (const/html-title* (or (:open-graph/title page)
+                         (:page/title page))))
 
 (defn get-open-graph-description [page]
   (or (:open-graph/description page)

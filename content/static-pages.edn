@@ -2,9 +2,9 @@
   :page/kind :page.kind/frontpage}
  {:page/uri "/view-transition-1/"
   :page/kind :page.kind/view-transition-1
-  :open-graph/title "View Transition 1"}
+  :page/title "View Transition 1"}
  {:page/uri "/view-transition-2/"
   :page/kind :page.kind/view-transition-2
-  :open-graph/title "View Transition 2"}
+  :page/title "View Transition 2"}
  {:page/uri "/atom.xml"
   :page/kind :page.kind/rss-feed}]

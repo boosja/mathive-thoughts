@@ -2,8 +2,9 @@
   (:require [mathive-thoughts.components :as comp]
             [mathive-thoughts.const :as const]))
 
-(defn ^{:indent 2} render-view-transition-page [_context _page body]
+(defn ^{:indent 2} render-view-transition-page [_context page body]
   (comp/layout {:logo const/logo
+                :title (const/html-title page)
                 :class "view-transition-page"}
                (list [:figure.grid.grid-rows-1.items-center.justify-items-center.h-32.overflow-hidden.m-auto.rounded-md
                       {:class "w-10/12"}

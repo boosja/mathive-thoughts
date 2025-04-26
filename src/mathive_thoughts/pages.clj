@@ -7,7 +7,8 @@
             [powerpack.markdown :as md]))
 
 (defn render-article [_context page]
-  (comp/layout {:logo const/logo}
+  (comp/layout {:logo const/logo
+                :title (const/html-title page)}
     (list
      (when-let [title (:page/title page)]
        [:h1 title])
