@@ -14,6 +14,22 @@ img {
   margin-right: auto;
 }
 
+table.based thead.sticky.top-0 tr th {
+    @apply p-2 border-gray-200 dark:border-gray-600;
+}
+
+table.based th,
+table.based td {
+    padding: 4px;
+    text-align: center;
+    font-size: 12px;
+}
+
+table.based th:not(:last-child),
+table.based td:not(:last-child) {
+  @apply border-r border-gray-200 dark:border-zinc-700;
+}
+
 /* ========================= */
 /* [[[[ VIEW TRANSITION ]]]] */
 /* ========================= */
