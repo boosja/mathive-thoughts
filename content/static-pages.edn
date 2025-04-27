@@ -8,6 +8,7 @@
   :page/title "View Transition 2"}
  {:page/uri "/based/"
   :page/kind :page.kind/based
-  :page/title "Based"}
+  :page/title "Based"
+  :open-graph/description "0 1 2 4 12 22 40 71 128 213 368 60A A64 1331 2000 35BD 5B28 9AA5 G7DC 17691 25556 3H446 67GL8 AIAM4 I974K 14FA0A 1QGF0G 37PHEM 5FL0O8 9BKJ98 G00000 REDER1 1D8XQRQ 2BR45QB 3Y283Y8"}
  {:page/uri "/atom.xml"
   :page/kind :page.kind/rss-feed}]
