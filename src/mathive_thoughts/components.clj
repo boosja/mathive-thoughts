@@ -41,7 +41,7 @@
     {:href "https://github.com/boosja"}
     "Github"]
    [:span.grow]
-   [:span "2024"]])
+   [:span "2024-"]])
 
 (defn article [& content]
   [:article.prose-zinc.container
