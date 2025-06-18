@@ -27,7 +27,7 @@ opprettet.
 Tekst kan vi ikke gjøre så mye med, så vi må parse dataene først. Ved å kjøre
 `git log` får vi dette:
 
-```
+```clj
 commit 4582c769dcf751b029f0934bc60afc62df0e9616
 Author: Christian Johansen <christian@jaliksom.du>
 Date:   Sat Jun 14 10:19:06 2025 +0200
@@ -53,7 +53,7 @@ felter du ønsker og i hvilken form. I tilleg kan du legge til `--numstat` som
 gir deg antal linjer lagt til og fjernet for hver fil i hver commit. Da får vi
 denne kommandoen:
 
-```zsh
+```clj
 git log --numstat --pretty=format:%H%n%an%n%ae%n%aI%n%cn%n%ce%n%cI%n%s%n%b
 ```
 
@@ -77,7 +77,7 @@ Da blir du satt som committer, mens original forfatteren blir bevart.
 
 Resultatet vi får ut da, blir:
 
-```
+```clj
 4582c769dcf751b029f0934bc60afc62df0e9616
 Christian Johansen
 christian@jaliksom.du
