@@ -2193,6 +2193,17 @@ img {
   margin-right: auto;
 }
 
+.enhance {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  text-align: center;
+  font-family: "Fontdiner Swanky", serif;
+  font-size: 3.75rem;
+  line-height: 1;
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity))
+}
+
 table.based thead.sticky.top-0 tr th {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
