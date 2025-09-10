@@ -46,8 +46,8 @@ module.exports = {
         }
       }),
       backgroundImage: {
-        'texture-light': 'url("images/bg_light.svg")',
-        'texture-dark': 'url("images/bg_dark.svg")'
+        // 'texture-light': 'url("images/bg_light.svg")',
+        // 'texture-dark': 'url("images/bg_dark.svg")'
       },
       fontFamily: {
         swanky: '"Fontdiner Swanky", serif',

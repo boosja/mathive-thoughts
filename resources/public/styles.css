@@ -2043,10 +2043,6 @@ video {
   background-image: linear-gradient(to right, var(--tw-gradient-stops))
 }
 
-.bg-texture-light {
-  background-image: url("images/bg_light.svg")
-}
-
 .from-amber-200 {
   --tw-gradient-from: #fde68a var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(253 230 138 / 0) var(--tw-gradient-to-position);
@@ -2638,10 +2634,6 @@ table.based td:not(:last-child) {
 
   .dark\:bg-zinc-950\/40 {
     background-color: rgb(9 9 11 / 0.4)
-  }
-
-  .dark\:bg-texture-dark {
-    background-image: url("images/bg_dark.svg")
   }
 
   .dark\:from-amber-300 {
