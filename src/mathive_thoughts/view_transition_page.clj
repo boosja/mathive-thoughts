@@ -6,12 +6,12 @@
   (comp/layout {:logo const/logo
                 :title (const/html-title page)
                 :class "view-transition-page"}
-               (list [:figure.grid.grid-rows-1.items-center.justify-items-center.h-32.overflow-hidden.m-auto.rounded-md
-                      {:class "w-10/12"}
-                      [:img.w-full.grayscale.blur-sm
-                       {:src const/logo
-                        :alt "Mathive Thoughts Logo"}]]
-                     body)))
+    (list [:figure.grid.grid-rows-1.items-center.justify-items-center.h-32.overflow-hidden.m-auto.rounded-md
+           {:class "w-10/12"}
+           [:img.w-full.grayscale.blur-sm
+            {:src const/logo
+             :alt "Mathive Thoughts Logo"}]]
+          body)))
 
 (defn render-page-1 [context page]
   (render-view-transition-page context page
