@@ -35,6 +35,9 @@
     (re-find #"\.md$" filename)
     (map ingest-rest)
 
+    (re-find #"diminutives.edn" filename)
+    identity
+
     :else
     (map apply-open-graphs)))
 

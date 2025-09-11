@@ -1,6 +1,9 @@
 (ns mathive-thoughts.dev
-  (:require [mathive-thoughts.core :as blog]
-            [powerpack.dev :as dev]))
+  (:require [clojure.string :as str]
+            [mathive-thoughts.core :as blog]
+            [mathive-thoughts.diminutives :as diminutives]
+            [powerpack.dev :as dev])
+  (:import [java.time LocalDateTime]))
 
 (defmethod dev/configure! :default []
   (blog/create-app))
@@ -30,3 +33,34 @@
        (map #(into {} %)))
 
   :rfc)
+
+;; =================================================
+;;     Diminutive thoughts
+;; =================================================
+
+(def diminutives-path "content/diminutives.edn")
+
+(defn with-newlines [v]
+  (-> (binding [*print-length* nil
+                *print-level* nil]
+        (pr-str v))
+      (str/replace #"}\s" "}\n ")
+      (str/replace #"\",\s" "\"\n  ")))
+
+(defn add-diminutive [text]
+  (let [diminutive (read-string (slurp diminutives-path))]
+    (->> {:diminutive/text text
+          :diminutive/date (LocalDateTime/now)}
+         (conj diminutive)
+         (with-newlines)
+         (spit diminutives-path))))
+
+(comment
+  ;; Add shortie
+  (add-diminutive
+   "Sjekk ut [based/](based/), da vel!"
+   )
+
+  (diminutives/get-diminutives db)
+
+  )

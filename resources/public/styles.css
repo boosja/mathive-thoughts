@@ -1870,6 +1870,10 @@ video {
   margin-bottom: 2rem
 }
 
+.\!mt-0 {
+  margin-top: 0px !important
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1946,6 +1950,10 @@ video {
   grid-auto-flow: column
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+}
+
 .grid-rows-1 {
   grid-template-rows: repeat(1, minmax(0, 1fr))
 }
@@ -1956,6 +1964,10 @@ video {
 
 .justify-items-center {
   justify-items: center
+}
+
+.gap-2 {
+  gap: 0.5rem
 }
 
 .gap-4 {
@@ -1988,9 +2000,31 @@ video {
   border-width: 2px
 }
 
+.border-b {
+  border-bottom-width: 1px
+}
+
+.border-l-2 {
+  border-left-width: 2px
+}
+
+.border-l-4 {
+  border-left-width: 4px
+}
+
 .border-amber-300 {
   --tw-border-opacity: 1;
   border-color: rgb(252 211 77 / var(--tw-border-opacity))
+}
+
+.border-amber-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(251 191 36 / var(--tw-border-opacity))
+}
+
+.border-zinc-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(82 82 91 / var(--tw-border-opacity))
 }
 
 .bg-amber-200\/30 {
@@ -2071,6 +2105,11 @@ video {
   padding: 1rem
 }
 
+.\!px-4 {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem
@@ -2114,8 +2153,16 @@ video {
   padding-bottom: 4rem
 }
 
+.pb-2 {
+  padding-bottom: 0.5rem
+}
+
 .pt-4 {
   padding-top: 1rem
+}
+
+.text-right {
+  text-align: right
 }
 
 .font-mono {
@@ -2577,6 +2624,10 @@ table.based td:not(:last-child) {
 
 .first\:mt-0:first-child {
   margin-top: 0px
+}
+
+.hover\:cursor-pointer:hover {
+  cursor: pointer
 }
 
 .hover\:underline:hover {

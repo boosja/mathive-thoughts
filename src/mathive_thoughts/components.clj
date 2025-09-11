@@ -1,5 +1,6 @@
 (ns mathive-thoughts.components
-  (:require [mathive-thoughts.const :as const])
+  (:require [mathive-thoughts.const :as const]
+            [powerpack.markdown :as md])
   (:import (java.time LocalDateTime)
            (java.time.format DateTimeFormatter)
            (java.util Locale)))
@@ -89,6 +90,14 @@
 (defn ymd [^LocalDateTime ldt]
   (.format ldt (DateTimeFormatter/ofPattern "d. MMMM y" no)))
 
+(defn ymdhm [^LocalDateTime ldt]
+  (.format ldt (DateTimeFormatter/ofPattern "d. MMMM y HH:mm" no)))
+
+(defn anchor [attrs & children]
+  [:a.block.no-underline.text-current.hover:cursor-pointer.hover:underline.m-0
+   attrs
+   children])
+
 (defn post-item [post]
   [:li.group.my-8.first:mt-0
    [:a.block.no-underline.text-current.group-hover:cursor-pointer.m-0
@@ -96,3 +105,8 @@
     [:h3.m-0.group-hover:underline (:page/title post)]
     [:small.italic (ymd (:blog-post/published post))]
     [:div.line-clamp-2 (:blog-post/desc post)]]])
+
+(defn diminutive [diminutive]
+  [:li.border-l-2.!px-4.border-l-4.border-amber-400
+   [:small (ymd (:diminutive/date diminutive))]
+   (md/render-html (:diminutive/text diminutive))])

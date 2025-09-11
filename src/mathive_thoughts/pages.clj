@@ -2,6 +2,7 @@
   (:require [mathive-thoughts.based :as based]
             [mathive-thoughts.components :as comp]
             [mathive-thoughts.const :as const]
+            [mathive-thoughts.diminutives :as diminutives]
             [mathive-thoughts.frontpage :as frontpage]
             [mathive-thoughts.rss :as rss]
             [mathive-thoughts.view-transition-page :as view-transition-page]
@@ -22,6 +23,7 @@
   (case (:page/kind page)
     :page.kind/frontpage (frontpage/render context page)
     :page.kind/blog-post (render-blog-post context page)
+    :page.kind/diminutives (diminutives/render context page)
     :page.kind/view-transition-1 (view-transition-page/render-page-1 context page)
     :page.kind/view-transition-2 (view-transition-page/render-page-2 context page)
     :page.kind/based (based/render context page)
