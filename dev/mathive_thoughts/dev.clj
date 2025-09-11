@@ -8,11 +8,13 @@
 (defmethod dev/configure! :default []
   (blog/create-app))
 
-(comment
-
+(comment ;; s-:
   (dev/start)
   (dev/stop)
   (dev/reset)
+  )
+
+(comment
 
   (set! *print-namespace-maps* false)
 
