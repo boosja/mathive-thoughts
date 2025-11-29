@@ -1,2 +1,4 @@
 [{:diminutive/text "Sjekk ut [based](/based/), da vel!"
-  :diminutive/date #time/ldt "2025-05-05T08:07:22.840155"}]
+  :diminutive/date #time/ldt "2025-05-05T08:07:22.840155"}
+ {:diminutive/text "Bruk\n```\n[includeIf \"gitdir:~/path/to/directory/\"]\n\tpath = /path/to/home/.gitconfig-<user>\n```\n for særskilte git-configs mellom mapper (f.eks. forskjellige brukere mellom jobb- og fritidsprosjekter)."
+  :diminutive/date #time/ldt "2025-11-29T12:00:00.000000"}]
