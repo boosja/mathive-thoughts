@@ -17,5 +17,6 @@
 
        :optimus/assets [{:public-dir "public"
                          :paths [#"/*\.(png|ico)"
-                                 #"images/.*\..*"]}]}
+                                 #"images/.*\..*"
+                                 #"videos/.*\..*"]}]}
       highlight/install))
