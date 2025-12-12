@@ -19,7 +19,7 @@ det jeg har brukt noe av tiden min på i 2025.
 ### [Følg dopamin-hitsene](/blog-posts/folg-dopamin-hitsene/)
 <em>12. desember 2025</em>
 
-### [Ekspert på utviklerverktøyet ditt](https://parenteser.mattilsynet.io/ekspert-paa-utviklerverktoy/)
+### [Ekspert på utviklerverktøyet ditt](/blog-posts/ekspert-paa-utviklerverktoy/)
 <em>21. oktober 2025</em>
 
 ### [Git repo – En analyse](https://mathivethoughts.no/blog-posts/git-analyse/)
